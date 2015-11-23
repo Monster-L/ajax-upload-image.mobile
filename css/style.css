@@ -1,0 +1,131 @@
+/* uploadImage css begin*/
+ol, ul {
+    list-style: none;
+}
+
+ div, p, body, ul, h3, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: 400;
+}
+
+.g-items img{
+	margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: 400;
+}
+
+.g-items ul {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.g-items li {
+    border-bottom: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    line-height: 30px;
+    padding: 10px;
+    color: #999;
+}
+
+.g-items li.file-line .desc {
+    position: absolute;
+    left: 70px;
+    top: 15px;
+    line-height: 140%;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.upload-area .upload-btn {
+    border: 1px dashed #e3e3e3!important;
+}
+
+.upload-area .upload-btn.small .file-input {
+    width: 45px;
+    height: 45px;
+    font-size: 4.5rem;
+}
+
+.g-items li input {
+    text-align: right;
+}
+
+.upload-area .file-input {
+    opacity: 0;
+    width: 65px;
+    height: 64px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    font-size: 6.5rem;
+}
+
+.g-items li.file-line {
+    position: relative;
+}
+
+.upload-area .preview, .upload-area .upload-btn {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    color: #bdbdbd;
+    border: 1px solid #e3e3e3;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area .preview.small, .upload-area .upload-btn.small {
+    width: 45px;
+    height: 45px !important;
+    border-style: dashed;
+}
+
+.upload-area .preview.small {
+    border-style: solid;
+}
+
+.upload-area .upload-btn {
+    background-image: url(../images/pic_add.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+.upload-area .upload-btn.loading {
+    background-image: url(../images/reload.png);
+    -webkit-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    border: none;
+}
+
+.des-text.title{
+	color: #333;
+	font-size: 14px;
+}
+
+.des-text.des{
+	color: #666;
+	font-size: 12px;
+}
+
+.g-img-loading {
+    background: url(../images/ajax-loader.gif) center center no-repeat;
+}
+/* uploadImage css end*/

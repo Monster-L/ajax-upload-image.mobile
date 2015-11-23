@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../lib/jquery-1.10.2.min.js" type="text/javascript"><\/script>')</script>
+</head>
+<body>
+
+<div class="g-items">
+    <ul class="">
+	<li class="file-line J_CheckCity">
+		<div class="upload-area">
+			<div class="J_UploadBtn upload-btn small" style="overflow: hidden;">
+				<input class="J_FileInput file-input" type="file" capture="camera" accept="image/*">
+			</div>
+		</div>
+		<div class="desc J_Showmeonfileuploaded">
+			<h3 class="des-text title">上传图片(不超过5张)</h3>
+			<p class="des-text des">图片描述XXX</p>
+		</div>
+	</li>
+	</ul>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../lib/exif.js"></script>
+<script type="text/javascript" src="../js/wrapper.js"></script>
+<script type="text/javascript" src="../js/upload_image.js"></script>
+
+<script type="text/javascript">
+	var i = function(){
+    	return $("img.preview").length;
+    }
+	//上传地址
+	var uploaderUrl = '';
+	    new ImageUploader($(".upload-area"),{
+	    	uploaderUrl:uploaderUrl,
+	    	inputName:"consultFormDto.imgs",
+	    	beforeComplete:function(){
+	    		$('#submitBtn').attr('disabled',true);
+	    	},
+	    	afterComplete: function() {
+	    		$('#submitBtn').attr('disabled',false);
+	    		if(i() > 0){
+	    			$(".J_Showmeonfileuploaded").hide()
+	    		}
+	    		if(5 === i()){
+	    			$(".upload-btn").hide();
+	    		}
+	        }
+    });
+
+</script>
+
+
+</html>
