@@ -1,6 +1,14 @@
 # ajax-upload-image.mobile
 移动端异步上传图片demo
 
+###demo预览
+
+![上传图片](https://github.com/OldGuys/ajax-upload-image.mobile/raw/master/demo_upload.png)
+
+![图片操作](https://github.com/OldGuys/ajax-upload-image.mobile/raw/master/demo_scan.png)
+
+
+
 ###如何使用？
 
 1. demo/index.html中样例所示，引入如下js
