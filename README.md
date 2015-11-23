@@ -39,3 +39,19 @@ new ImageUploader($(".upload-area"),{
 	        }
     });
 ```
+3. 配置参数
+```js
+{
+	inputName: "img",//input名，用于构造表单提交数据
+	onlyShow: !1, //是否只查看
+	uploadBtn: ".J_UploadBtn",//图片上传按钮
+	fileInput: ".J_FileInput",//图片inputfile
+	prevClass: "preview",//所有上传成功并显示的图片都会添加此类（可统计当前已上传图片张数）
+	uploaderUrl: "",//图片上传url地址
+	deleteUrl: "",//删除图片url地址
+	limitSize: 5, //图片大小限制 5M
+	limitNum: 5, //图片数量限制
+	beforeComplete: function() {},//图片上传前回调函数
+	afterComplete: function() {}//图片上传完成回调函数
+}
+```
