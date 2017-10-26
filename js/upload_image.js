@@ -357,7 +357,7 @@ function ImageUploader($parent, options) {
 						break;
 				}
 			}
-			base64 = canvas.toDataURL("image/jpeg", 0.8);
+			base64 = canvas.toDataURL("image/png", 0.8);
 			upload(base64);
 		}
 	}
